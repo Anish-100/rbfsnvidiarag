@@ -1,8 +1,8 @@
-# Creating Multimodal AI Agent for Enhanced Content Understanding
+# Multimodal RAG Chatbot for Cloud native software
 
 ## Overview
 
-This Streamlit application implements a Multimodal Retrieval-Augmented Generation (RAG) system. It processes various types of documents including text files, PDFs, PowerPoint presentations, and images. The app leverages Large Language Models and Vision Language Models to extract and index information from these documents, allowing users to query the processed data through an interactive chat interface.
+Using Streamlit application and NVIDIA 's framework this chatbot implements a Multimodal Retrieval-Augmented Generation (RAG) system. It processes different types of documents like   PDFs, PowerPoint presentations, and images. The app leverages Large Language Models and Vision Language adaptersto extract and index information from these documents, allowing users to query the processed data through an interactive chat interface.
 
 The system utilizes LlamaIndex for efficient indexing and retrieval of information, NIM microservices for high-performance inference capabilities, and Milvus as a vector database for efficient storage and retrieval of embedding vectors. This combination of technologies enables the application to handle complex multimodal data, perform advanced queries, and deliver rapid, context-aware responses to user inquiries.
 
@@ -82,28 +82,5 @@ streamlit run app.py
 - `vectorstore/` : Repository to store information from pdfs and ppt
 
 
-## GPU Acceleration for Vector Search
-To utilize GPU acceleration in the vector database, ensure that:
-1. Your system has a compatible NVIDIA GPU.
-2. You're using the GPU-enabled version of Milvus (as shown in the setup instructions).
-3. There are enough concurrent requests to justify GPU usage. GPU acceleration typically shows significant benefits under high load conditions.
-
-It's important to note that GPU acceleration will only be used when the incoming requests are extremely high. For more detailed information on GPU indexing and search in Milvus, refer to the [official Milvus GPU Index documentation](https://milvus.io/docs/gpu_index.md).
-
-To connect the GPU-accelerated Milvus with LlamaIndex, update the MilvusVectorStore configuration in app.py:
-```
-vector_store = MilvusVectorStore(
-    host="127.0.0.1",
-    port=19530,
-    dim=1024,
-    collection_name="your_collection_name",
-    gpu_id=0  # Specify the GPU ID to use
-)
-```
-
 ## Contributing
 Contributions to this project are welcome! Please follow these steps:
-1. Fork the NVIDIA/GenerativeAIExamples repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes in the community/multimodal_rag/ directory.
-4. Submit a pull request to the main repository.
