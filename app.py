@@ -53,7 +53,7 @@ def main():
     col1, col2 = st.columns([1, 2])
     
     with col1:
-        st.title("Multimodal RAG")
+        st.title("RBFS IQ: Multimodal assistant")
         
         input_method = st.radio("Choose input method:", ("Upload Files", "Enter Directory Path"))
         
