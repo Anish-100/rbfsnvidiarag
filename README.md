@@ -16,10 +16,12 @@ The system utilizes LlamaIndex for efficient indexing and retrieval of informati
 
 ## Setup
 
+Acknowledgement: NVIDIA's multimodal RAG development framework from the community repo
+
 1. Clone the repository:
 ```
-git clone https://github.com/NVIDIA/GenerativeAIExamples.git
-cd GenerativeAIExamples/community/llm_video_series/video_2_multimodal-rag
+git clone https://github.com/Anish-100/rbfsnvidiarag
+
 ```
 
 2. (Optional) Create a conda environment or a virtual environment:
