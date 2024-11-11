@@ -16,7 +16,7 @@ The system utilizes LlamaIndex for efficient indexing and retrieval of informati
 
 ## Setup
 
-Acknowledgement: NVIDIA's multimodal RAG development framework from the community repo
+Leveraged NVIDIA's multimodal RAG framework and NIM framework to build a chatbot
 
 1. Clone the repository:
 ```
@@ -84,5 +84,6 @@ streamlit run app.py
 - `vectorstore/` : Repository to store information from pdfs and ppt
 
 
-## Contributing
-Contributions to this project are welcome! Please follow these steps:
+## Acknowledgements
+NVIDIA's Open Source multimodal RAG development framework used as the base application
+
